@@ -2,7 +2,7 @@
 
 This repository sets up ArgoCD to use Testkube to generate testing resource manifests that ArgoCD will then apply to a Kubernetes cluster. To make that possible, Testkube needs to be added as a plugin to ArgoCD. This repository covers the steps to do that. 
 
-The repository is part of Testkube+ArgoCD integration which you can follow [here]().
+The repository is part of Testkube+ArgoCD integration which you can follow [here](https://kubeshop.io/blog/a-gitops-powered-kubernetes-testing-machine-with-argocd-and-testkube).
 
 ## 1. Building custom ArgoCD `repo-server` image
 
