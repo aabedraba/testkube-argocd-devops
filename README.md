@@ -20,6 +20,8 @@ docker build -t CONTAINER_REGISTRY argocd-customization/argocd.dockerfile
 
 The `argocd-repo-server` deployment images need to be replaced by the one built in the previous step. 
 
+Update the field `CONTAINER_REGISTRY` in the `patch.yaml` file and apply the following the command: 
+
 ```sh
 kubectl patch deployments.apps -n argocd argocd-repo-server --type json --patch-file argocd-customization/patch.yaml
 ```
