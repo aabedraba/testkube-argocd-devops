@@ -16,7 +16,7 @@ The image is built with Docker as shown below:
 docker build -t CONTAINER_REPOSITORY argocd-customization/argocd.dockerfile
 ```
 
-## 2. Patching ArgoCD's deployment
+## 2. Patching ArgoCD's deployment
 
 The `argocd-repo-server` deployment images need to be replaced by the one built in the previous step. 
 
@@ -26,7 +26,7 @@ Update the field `CONTAINER_REGISTRY` and apply the following the command:
 kubectl patch deployments.apps -n argocd argocd-repo-server --type json --patch-file argocd-customization/patch.yaml
 ```
 
-## 3. Define Testkube in ArgoCD  PluginConfigurattionManagement
+## 3. Define Testkube in ArgoCD  PluginConfigurattionManagement
 
 In order to define the name of the plugin that will be used by an ArgoCD application, and to define the command ArgoCD should run to generate the manifests when the plugin is used, run: 
 
@@ -34,7 +34,7 @@ In order to define the name of the plugin that will be used by an ArgoCD applica
 kubectl patch configmaps -n argocd argocd-cm --patch-file argocd-customization/argocd-plugins.yaml
 ```
 
-## 4. Create an ArgoCD application that uses the Testkube plugin 
+## 4. Create an ArgoCD application that uses the Testkube plugin 
 
 In [`testkube-application.yaml`](testkube-application.yaml) update the fieldd:
  -  `REPOSITORY_URL` with the Git repository containing your test definitions 
