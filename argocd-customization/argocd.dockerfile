@@ -10,7 +10,7 @@ RUN apt-get update && \
  ## Configure testkube
  mkdir .testkube && echo "{}" > .testkube/config.json && \
  ## Download testkube and move to bin directory
- wget -O- https://github.com/kubeshop/testkube/releases/download/v0.9.21/testkube_0.9.21_Linux_x86_64.tar.gz | tar -xzvf - && \
+ wget -O- https://github.com/kubeshop/testkube/releases/download/v1.0.14/testkube_1.0.14_Linux_x86_64.tar.gz | tar -xzvf - && \
  mv kubectl-testkube /usr/local/bin/testkube && \
  chmod +x /usr/local/bin/testkube
  
