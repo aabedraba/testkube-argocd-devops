@@ -1,6 +1,6 @@
 - op: replace
   path: /spec/template/spec/containers/0/image
-  value: CONTAINER_REGISTRY/argocd-custom
+  value: kubeshop/argocd-testkube:v1.0.1
 - op: replace
   path: /spec/template/spec/initContainers/0/image
-  value: CONTAINER_REGISTRY/argocd-custom
+  value: kubeshop/argocd-testkube:v1.0.1
