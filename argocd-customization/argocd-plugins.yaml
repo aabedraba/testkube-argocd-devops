@@ -3,5 +3,5 @@ data:
     - name: testkube
       generate:
         command: ["bash", "-c"]
-        args: ["testkube generate test-crds ."]
+        args: ["testkube generate tests-crds ."]
       lockRepo: true
